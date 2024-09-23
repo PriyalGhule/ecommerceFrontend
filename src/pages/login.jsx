@@ -51,7 +51,7 @@ export const Login=()=>{
 
         const res_data=await response.json();
         console.log("res_data : ",res_data.extraDetails?res_data.extraDetails:"Invalid credentials");
-        if(response.ok){
+        if(response.status==200){
             toast.success("Login successfull");
             setUser({
                 email:"",
